@@ -10,7 +10,9 @@ app.set("port", 8080);
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
-
+app.get("/", (req, res) =>{
+    res.send("Hola esta es la pagina principal, ve a /productos para ver todos los productos")
+})
 app.get("/products", async (req, res) => {
     let data = await contenedor.getAll();
     res.send(data);
