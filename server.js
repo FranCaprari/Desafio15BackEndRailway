@@ -102,17 +102,16 @@ app.use("/api/randoms", randomNumRouter);
 
 const options={
     alias: {
-        p: "PORT",
-        m: "MODO",
+        m: "MODO"
     },
     default: {
-        PORT: 8080,
-        MODO: "fork",
+        MODO: "fork"
     }
 };
 
 const argv = process.argv.slice(2);
-const {PORT, MODO} = ParseArgs(argv, options);
+const {MODO} = ParseArgs(argv, options);
+const PORT = process.env.PORT || 8080;
 const cpu = cpus().length;
 
 if(MODO == "cluster") {
