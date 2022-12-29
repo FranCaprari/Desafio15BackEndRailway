@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Buenos dias, <%= nombre %></h1>
+        <button class="logoutBtn" onclick="location.href='/logout'">
+            Cerrar session</button>
+    </div>
+    <div>
+        <div class="productsForm">
+            <h1>
+                Agregar productos
+            </h1>
+            <form  id="addProducts">
+                <div>
+                    <label for="nombre">Nombre</label>
+                    <input id="title" type="text" name="title" required>
+                </div>
+                <div>
+                    <label for="precio">Precio</label>
+                    <input id="price" type="number" name="price" required>
+                </div>
+                <div>
+                    <label for="image">Imagen</label>
+                    <input id="thumbnail" type="url" name="thumbnail">
+                </div>
+                <button>Agregar</button>
+            </form>
+        </div>
+        <div id="productos"></div>
+        <div>
+            <h1>Chat
+                <span id="porcentaje"></span>
+            </h1>
+            <div>
+                <input type="text" id="email" placeholder="Ingrese email">
+                <div id="emailError"></div>
+                <input type="text" id="name" placeholder="Ingrese su nombre">
+                <div id="nameError"></div>
+                <input type="text" id="lastName" placeholder="Ingrese su apellido">
+                <div id="lastNameError"></div>
+                <input type="text" id="age" placeholder="Ingrese su edad">
+                <div id="ageError"></div>
+                <input type="text" id="alias" placeholder="ingrese su alias">
+                <div id="aliasError"></div>
+            </div>
+            <div id="mensajes"></div>
+            <form id="postMensaje">
+                <input id="mensaje" type="text" placeholder="Ingrese su mesnaje">
+                <div id="msjError"></div>
+                <button id="enviar" type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <script src="../../index.js" type="module"></script>
+</body>
+</html>
